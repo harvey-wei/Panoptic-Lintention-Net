@@ -1,0 +1,13 @@
+_BASE_: "Base-Panoptic-PPA.yaml"
+MODEL:
+  SEM_SEG_HEAD:
+    NAME: "SemSegHeadPPALayer"
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  RESNETS:
+    DEPTH: 50
+SOLVER:
+  # 18 epochs = 270000 iterations with batch size of 8
+  # decay by a factor of 10 at 12th epoch and 16.5th epoch
+  STEPS: (180000, 247500)
+  MAX_ITER: 270000
+OUTPUT_DIR: "./output_panoptic_ppa_encoder_layer_r50_1x"

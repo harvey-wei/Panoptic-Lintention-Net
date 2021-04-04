@@ -1,0 +1,18 @@
+_BASE_: "../../../../configs/Base-RCNN-FPN.yaml"
+MODEL:
+  META_ARCHITECTURE: "PanopticFPN"
+  MASK_ON: True
+  SEM_SEG_HEAD:
+    LOSS_WEIGHT: 0.5
+    PPA_NUM_HEADS: 4
+    PPA_NUM_PATCHES: 16
+    PPA_QUERY_PROJECT: True
+    PPA_PATCHES_PROJECT: True
+    PPA_POSITION_EMBED: True
+    PPA_DROPOUT: 0.1
+    PPA_FFN_EXPANSION: 4
+DATASETS:
+  TRAIN: ("coco_2017_train_panoptic_separated",)
+  TEST: ("coco_2017_val_panoptic_separated",)
+DATALOADER:
+  FILTER_EMPTY_ANNOTATIONS: False

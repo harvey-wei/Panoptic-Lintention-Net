@@ -1,0 +1,11 @@
+_BASE_: "Base-Panoptic-PyConv.yaml"
+MODEL:
+  SEM_SEG_HEAD:
+    NAME: "SemSegPyConvHeadV1"
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  RESNETS:
+    DEPTH: 50
+SOLVER:
+  STEPS: (210000, 250000)
+  MAX_ITER: 270000
+OUTPUT_DIR: "./output_panoptic_fpn_pyconv_v1_r50_3x"
