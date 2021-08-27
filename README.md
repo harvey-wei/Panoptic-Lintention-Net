@@ -2,10 +2,13 @@
 This project hosts the code for implementing the models for Panoptic Segmentation proposed in the following paper:
 
 > [**Panoptic Lintention Network: Towards Efficient Navigational Perception for the Visually Impaired**](https://arxiv.org/abs/2103.04128),
->
-> Wei Mao, Jiaming Zhang, Kailun Yang, Rainer Stiefelhagen
->
-> *arXiv preprint ([arXiv 2103.04128](https://arxiv.org/abs/2103.04128))*
+>@inproceedings{mao2021panoptic,
+title={Panoptic Lintention Network: Towards Efficient Navigational Perception for the Visually Impaired},
+author={Mao, Wei and Zhang, Jiaming and Yang, Kailun and Stiefelhagen, Rainer},
+booktitle={2021 IEEE International Conference on Real-time Computing and Robotics (RCAR)},
+year={2021},
+organization={IEEE}
+}
 
 ## VerConv and Lintention
 ![verconv](./figures/verconv.png)
